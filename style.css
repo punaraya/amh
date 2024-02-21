@@ -20,7 +20,7 @@
 }
 
 .chat-overlay-open {
-    height: 712px;
+    height: 512px;
 }
 
 .chat-overlay-closed {
@@ -30,7 +30,7 @@
 
 .chat-overlay-wrapper {
     width: 376px;
-    height: 648px;
+    height: 448px;
 }
 
 .chat-overlay-header-mobile {
