@@ -41,7 +41,7 @@
     var my_JSON_object = JSON.parse(request.responseText);
     var chatUrl = my_JSON_object.chatUrl;
     var clientUrl = my_JSON_object.clientUrl;
-    var originalPageUrl = document.getElementById('originalIframe')?.contentWindow?.location?.href;
+    var originalPageUrl = document.getElementById('originalFrame')?.contentWindow?.location?.href;
     console.log('originalPageUrl: ' + originalPageUrl);
 
     
