@@ -289,7 +289,7 @@
          */
         console.log('inside sendMessage - loaded originalFrame');
         var originalPageUrl = document.getElementById('originalFrame');
-        console.log('sendMessage - originalPageUrl: ' + originalPageUrl);
+        console.log('sendMessage - originalPageUrl: ' + JSON.stringify(originalPageUrl));
         var receiverElem = document.getElementById('receiver').contentWindow;
         receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://amh.demo.amelia.com/Amelia/ui/amh/chat");
     }
