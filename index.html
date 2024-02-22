@@ -287,7 +287,8 @@
          * @param {Object} data - data to be sent to url provided of child frame
          * @returns - no return
          */
-        var originalPageUrl = document.getElementById('originalFrame').contentWindow.location.href;
+        console.log('inside sendMessage - loaded originalFrame');
+        var originalPageUrl = document.getElementById('originalFrame').contentWindow.location.href || "";
         console.log('sendMessage - originalPageUrl: ' + originalPageUrl);
         var receiverElem = document.getElementById('receiver').contentWindow;
         receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://amh.demo.amelia.com/Amelia/ui/amh/chat");
