@@ -238,6 +238,11 @@
         console.log('frame content', this.contentWindow);
     };
 
+    document.querySelector('iframe#originalFrame').onload = function () {
+        console.log('original iframe', this);
+        console.log('original frame content', this.contentWindow);
+    };
+
     /*window.addEventListener("message", (event) => {
         console.log('im in beginning of event', event.origin);
         if (event.origin !== clientUrl)
