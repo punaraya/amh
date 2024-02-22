@@ -238,13 +238,13 @@
         console.log('frame content', this.contentWindow);
     };
 
-    window.addEventListener("message", (event) => {
+    /*window.addEventListener("message", (event) => {
         console.log('im in beginning of event', event.origin);
         if (event.origin !== clientUrl)
             return;
 
         console.log('event', event);
-    }, false);
+    }, false);*/
 
     function receiveMessage(e, data) {
         /**
@@ -256,6 +256,9 @@
  
         var url = e.data.url;
 
+        console.log("Event received - Origin: " + e.origin + ", data: " + JSON.stringify(e.data));
+        if (e.origin !== clientUrl)
+            return;
         if (e.data.action.includes("nav")) {
             loadiFrame(e.data.toUrl);
             console.log(e.data.action)
