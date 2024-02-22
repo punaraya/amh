@@ -13,8 +13,11 @@ function sendMessage() {
      * @returns - no return
      */
 
+    console.log('inside sendMessage in script - loaded originalFrame');
+    var originalPageUrl = document.getElementById('originalFrame').contentWindow.location.href || "";
+    console.log('sendMessage in script - originalPageUrl: ' + originalPageUrl);
     var receiverElem = document.getElementById('receiver').contentWindow;
-    receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://bcbsma.demo.amelia.com/Amelia/ui/BSBSMA/chat");
+    receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://amh.demo.amelia.com/Amelia/ui/amh/chat");
 }
 
 async function grabData() {
