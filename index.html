@@ -33,7 +33,7 @@
     </div>
 </div>
 <iframe src="" id="originalFrame"
-        style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:99;"></iframe>
+        style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:99;" onload="sendMessage();></iframe>
 <script>
     var request = new XMLHttpRequest();
     request.open("GET", "properties.json", false);
@@ -290,7 +290,7 @@
          */
 
         var receiverElem = document.getElementById('receiver').contentWindow;
-        receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://bcbsma.demo.amelia.com/Amelia/ui/BSBSMA/chat");
+        receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://amh.demo.amelia.com/Amelia/ui/amh/chat");
     }
 
     window.addEventListener('message', receiveMessage);
